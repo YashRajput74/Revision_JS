@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    padding: 0rem 1rem;
+}
+
+li{
+    list-style: none;
+    margin: 0px 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.hamburger{
+    display: none;
+}
+
+@media(max-width:500px){
+    .hamburger{
+        display: block;
+    }
+    nav{
+        display: none;
+        position: absolute;
+        top: 3rem;
+        right: 0;
+    }
+    .hamburger:hover+nav{
+        display: flex;
+    }
+    .hamburger div{
+        width: 20px;
+        border: 1px solid black;
+        margin-top: 5px;
+        position: relative;
+    }
+    nav ul{
+        flex-direction: column;
+        padding: 0rem;
+        border: 1px solid black;
+    }
+}

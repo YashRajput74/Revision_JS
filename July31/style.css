@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#tabContainer{
+    width: 100%;
+    padding: 2vw;
+    border: 1px solid black;
+}
+
+.tabs{
+    display: flex;
+}
+.tabs div{
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+}
+.tabs div input{
+    margin-right: 0.2rem
+}
+
+.content{
+    width: 25%;
+    box-shadow:  0 1px 5px rgba(0,0,0,0.1);
+}
+
+.homeContent{
+    display: none;
+}
+
+.servicesContent{
+    display: none;
+}
+
+.cotactContent{
+    display: none;
+}
+
+#home:checked .homeContent{
+    display: block;
+}
+
+#service:checked .servicesContent{
+    display: block;
+}
+
+#contact:checked .contactContent{
+    display: block;
+}

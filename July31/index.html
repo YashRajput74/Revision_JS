@@ -1,0 +1,39 @@
+<!-- 
+Question 2: Pure CSS Tab Component
+Task:
+Create a tabbed interface using only HTML & CSS:
+3 tabs (e.g., Home, Services, Contact)
+Show corresponding tab content on click using only radio buttons or :target
+Tab indicator animation (like sliding underline)
+Challenge Points:
+Maintain layout without JavaScript
+Smooth content switch animations
+Responsiveness 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <div id="tabContainer">
+            <div class="tabs">
+                <div id="home"><input type="radio" name="tab" id="home"><label for="tab">Home</label></div>
+                <div id="services"><input type="radio" name="tab" id="service"><label for="tab">Services</label></div>
+                <div id="contact"><input type="radio" name="tab" id="contact"><label for="tab">Contact</label></div>
+            </div>
+            <div class="content">
+                <div class="homeContent">This is home content.</div>
+                <div class="servicesContent">This is services content.</div>
+                <div class="cotactContent">These are the contacts.</div>
+            </div>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>
