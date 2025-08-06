@@ -1,0 +1,57 @@
+<!-- 
+### **Front-End Challenge: Custom Star Rating Component**
+**🧩 Task:**
+Build a reusable **Star Rating component** using **HTML, CSS, and JavaScript** (no frameworks).
+#### ✅ Features:
+* Renders 5 clickable stars (can be extended).
+* Hovering over a star previews the rating.
+* Clicking sets the rating.
+* Clicking again on the same rating resets it to 0.
+* Visually highlight the selected rating.
+* Allow customizing max stars via JavaScript.
+---
+#### 💻 Example HTML:
+```html
+<div id=""rating""></div>
+```
+---
+#### 🔧 Expected JavaScript Usage:
+```js
+createStarRating(document.getElementById('rating'), {
+  maxStars: 5,
+  onRate: (value) => console.log('Rated:', value)
+});
+```
+---
+#### 💅 Style Goals:
+* Use CSS to make stars look clean and scalable (SVG or Unicode ★/☆).
+* Animate hover with a soft color transition.
+* Support keyboard accessibility as a bonus (arrow keys to rate).
+
+---
+#### 🤯 Bonus Features (Optional):
+
+* Allow half-stars (e.g., 3.5)
+* Allow programmatically setting or resetting the rating
+* Make it support multiple instances on a page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="rating">
+        <div class="eachStar" data-num="1"></div>
+        <div class="eachStar" data-num="2"></div>
+        <div class="eachStar" data-num="3"></div>
+        <div class="eachStar" data-num="4"></div>
+        <div class="eachStar" data-num="5"></div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
