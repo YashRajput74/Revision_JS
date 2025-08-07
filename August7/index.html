@@ -1,0 +1,122 @@
+<!-- 
+"Sure. Here's a **20-minute challenge** that hits **real-world skills** across **HTML, CSS, and JavaScript** — requiring not just implementation but **thinking through component structure, state management, and reusability**.
+
+---
+
+## 🧪 **Component Challenge: Build a Custom Accordion Component**
+
+### 🕒 Time Limit: 20 minutes
+
+**Difficulty**: Intermediate–Advanced
+**Skills Tested**: DOM manipulation, state management, event handling, accessibility, clean HTML/CSS structure.
+
+---
+
+### 📋 **Task:**
+
+Build a **reusable accordion component** using **vanilla JavaScript**, **HTML**, and **CSS** — no frameworks.
+
+### ✅ Requirements:
+
+1. **Initial State:**
+
+   * Accordion items should be **collapsed** by default.
+
+2. **Toggle Behavior:**
+
+   * Clicking on an accordion **header** should expand its **content**.
+   * Clicking again should **collapse** it.
+
+3. **Only one section open at a time.**
+
+   * Opening one section should **close any other open section**.
+
+4. **Reusable:**
+
+   * The component should support **multiple accordion groups** on the same page.
+
+5. **Accessible:**
+
+   * Add basic accessibility:
+
+     * Use appropriate ARIA roles (`aria-expanded`, `aria-controls`, `role=""button""`).
+     * Enable **keyboard navigation**: `Enter` or `Space` toggles the section.
+
+6. **Style:**
+
+   * Clean, minimal styling. Animate expand/collapse (optional but bonus points).
+
+---
+
+### 💡 **Stretch Goals (if time allows):**
+
+* Support **dynamic data** (e.g., generate from a JS array).
+* Use CSS transitions for smooth opening/closing.
+* Add icons (e.g., +/−) that toggle based on open/closed state.
+
+---
+
+### 🧾 Example Output:
+
+```html
+<div class=""accordion"">
+  <div class=""accordion-item"">
+    <button class=""accordion-header"">Section 1</button>
+    <div class=""accordion-content"">
+      <p>Content for section 1</p>
+    </div>
+  </div>
+</div>
+```
+
+---
+
+### 🧠 What the Interviewer Is Looking For:
+
+* Can you write **modular, clean HTML/CSS**?
+* Can you manage **DOM state properly** without a framework?
+* Do you understand **accessibility** and best practices?
+* Is your JavaScript **componentized** and **reusable**?
+* Bonus: graceful degradation, responsiveness, transitions.
+
+---
+
+Would you like a starter template or should I keep it completely blank to simulate a real challenge?
+" 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="accordion">
+        <div class="accordion-item">
+            <button class="accordion-header">Section 1</button>
+            <div class="accordion-content">
+                <p>Content for section 1</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">Section 2</button>
+            <div class="accordion-content">
+                <p>Content for section 2</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">Section 3</button>
+            <div class="accordion-content">
+                <p>Content for section 3</p>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
