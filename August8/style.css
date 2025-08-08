@@ -1,0 +1,6 @@
+.cards{
+    display: none;
+}
+.cards.show{
+    display: block;
+}

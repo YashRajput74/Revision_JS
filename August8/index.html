@@ -1,0 +1,52 @@
+<!-- 
+"Description:
+Create a responsive image gallery layout with 6 placeholder ""image cards"" and a filter bar above it.
+Each card can just be a colored div with a category label like ""Nature"", ""Tech"", or ""People"".
+
+Functional Requirements:
+Layout:
+A header with title “Gallery”.
+A row of 3 buttons (Filters): ""All"", ""Nature"", ""Tech"".
+A grid of 6 div cards, each labeled by category.
+Use CSS Grid or Flexbox.
+Cards should wrap nicely on small screens.
+
+Functionality (JS):
+Clicking a filter button hides cards that don’t match.
+""All"" shows all cards.
+Active filter button should be visually highlighted.
+No frameworks or libraries.
+
+Rules:
+No images needed — just colored boxes with text labels inside.
+No AI or code suggestion tools.
+All work must be original.
+Time Limit: 20 minutes"
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>Gallery</header>
+    <div class="buttons">
+        <button>All</button>
+        <button>Nature</button>
+        <button>Tech</button>
+    </div>
+    <div class="cardsDiv">
+        <div data-cat="Nature" class="cards">Nature</div>
+        <div data-cat="Tech" class="cards">Tech</div>
+        <div data-cat="Tech" class="cards">Tech</div>
+        <div data-cat="Nature" class="cards">Nature</div>
+        <div data-cat="Tech" class="cards">Tech</div>
+        <div data-cat="Tech" class="cards">Tech</div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
