@@ -2,13 +2,13 @@ function filterCards(param) {
     const cards = document.querySelectorAll(".cards");
         cards.forEach((card)=>{
             if(param=="All"){
-                card.classList.add("show");
+                card.classList.remove("hide");
             }
             else if(card.dataset.cat==param){
-                card.classList.add("show");
+                card.classList.remove("hide");
             }
             else{
-                card.classList.remove("show");
+                card.classList.add("hide");
             }
         })
 }
