@@ -23,6 +23,8 @@ Clicking the "x" on a tag removes it from the selected list.
 Clicking outside the dropdown closes it.
 */
 
+import Dropdown from "./DropDown";
+
 export default function App() {
     const options = ["JS","HTML","CSS","React"];
     return (
