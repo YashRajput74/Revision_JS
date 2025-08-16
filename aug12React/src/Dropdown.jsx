@@ -8,10 +8,10 @@ export default function Dropdown({options}) {
             </div>
             <div>
                 <div className="showOptions"></div>
-                {options.forEach((option)=>{
+                {options.map((option)=>
                     // console.log(option);
-                    <Option tagName={option}/>
-                })}
+                    <Option tagName={option} key={option}/>
+                )}
             </div>
         </>
     )

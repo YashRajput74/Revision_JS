@@ -1,6 +1,5 @@
-export default function Option({option}){
+export default function Option({tagName}){
     console.log(tagName)
-    console.log(option)
     return (
         <button>{tagName}</button>
     )
