@@ -1,0 +1,81 @@
+/* 
+data...
+generic function that makes component...
+
+*/
+
+
+const data = {
+    page1: {
+        label:"",
+        field1:{
+            label:"",
+            input:"",
+            placeholder:"",
+            required:"",
+            format:""
+        },
+        field2:{
+            label:"",
+            input:"",
+            placeholder:"",
+            required:"",
+            format:""
+        },
+        field3:{
+            label:"",
+            input:"",
+            placeholder:"",
+            required:"",
+            format:""
+        }
+    },
+    page2:{
+        label:"",
+        field1:{
+            label:"",
+            input:"",
+            placeholder:"",
+            required:"",
+            format:""
+        },
+        field2:{
+            label:"",
+            input:"",
+            placeholder:"",
+            required:"",
+            format:""
+        },
+        field3:{
+            label:"",
+            input:"",
+            placeholder:"",
+            required:"",
+            format:""
+        }
+    },
+    page3:{
+        label:"",
+        field1:{
+            label:"",
+            input:"",
+            placeholder:"",
+            required:"",
+            format:""
+        },
+        field2:{
+            label:"",
+            input:"",
+            placeholder:"",
+            required:"",
+            format:""
+        },
+        field3:{
+            label:"",
+            input:"",
+            placeholder:"",
+            required:"",
+            format:""
+        }
+    },
+}

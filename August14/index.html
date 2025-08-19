@@ -1,0 +1,67 @@
+<!-- 
+Coding Challenge (20 minutes)
+
+Build a Multi-Step Form with Stepper UI
+
+🧩 Requirements:
+
+At the top, create a horizontal stepper:
+4 steps, each represented by a numbered circle.
+Circles should be connected with a line.
+The current step should be visually highlighted.
+Below the stepper, display a form section that updates based on the current step.
+
+Step 1: Basic info (e.g., name)
+Step 2: Contact info (e.g., email)
+Step 3: Preferences (e.g., checkbox or select)
+Step 4: Confirmation (show collected info or "You're done!")
+
+Add "Next" and "Previous" buttons:
+"Previous" disabled on Step 1
+"Next" becomes "Submit" on the final step
+On clicking "Submit", optionally show a success message
+
+🎨 Style Suggestions:
+Circles should be visually linked with a progress line that fills as the user advances.
+Use smooth transitions for the form content.
+Make it responsive on smaller screens (optional bonus).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="steps">
+        <div class="circle" data-step="basicInfo">1</div>
+        <div class="circle" data-step="contactInfo">2</div>
+        <div class="circle" data-step="prefrences">3</div>
+        <div class="circle" data-step="confirmation">4</div>
+        <div class="line"></div>
+    </div>
+    <form class="form">
+        <div class="formFeild">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" required>
+        </div>
+        <div class="formFeild">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName">
+        </div>
+        <div class="formFeild">
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" id="male">
+            <input type="radio" name="gender" id="female">
+        </div>
+    </form>
+    <div class="buttons">
+        <button id="previous"><code><</code> Previous</button>
+        <button id="next"> Next <code>></code></button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
