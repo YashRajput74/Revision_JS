@@ -30,11 +30,14 @@ function checkPassword(submittedValue) {
 }
 
 function addEvents() {
-    const submitButton = document.querySelector(".submitPassword");
+    /* const submitButton = document.querySelector(".submitPassword");
     submitButton.addEventListener("click", (event) => {
         event.preventDefault()
         const submittedValue = document.querySelector("#pass1").value;
         checkPassword(submittedValue);
+    }) */
+    document.querySelector("#pass1").addEventListener("input",(event)=>{
+        checkPassword(event.target.value);
     })
 }
 
