@@ -6,3 +6,5 @@ Array.prototype.myMap = function (callbackFn) {
     }
     return newArr;
 }
+
+// Array.prototype.foreach
