@@ -8,3 +8,9 @@ Array.prototype.myMap = function (callbackFn) {
 }
 
 // Array.prototype.foreach
+
+Array.prototype.myforEach = function (callbackFn) {
+    for(let i=0;i<this.length;i++){
+        callbackFn(this[i],i,this);
+    }
+}
