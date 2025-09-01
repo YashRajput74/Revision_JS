@@ -1,5 +1,5 @@
 import Option from "./Option"
-
+/* improper  */
 export default function Dropdown({options}) {
     return (
         <>
