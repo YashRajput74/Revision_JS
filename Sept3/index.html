@@ -1,0 +1,44 @@
+<!-- 
+Write a JavaScript function parseCSSVariables(cssString) that takes a string containing CSS rules and returns an object mapping CSS variable names to their values.
+
+The function should extract all CSS custom properties (--variable-name: value;) defined inside the :root selector.
+
+Ignore variables defined elsewhere.
+
+Assume the input string is well-formed CSS.
+
+Input: const css = `
+  :root {
+    --main-color: #3498db;
+    --padding: 10px 20px;
+    --font-size: 16px;
+  }
+  
+  body {
+    background: var(--main-color);
+  }
+`;
+
+console.log(parseCSSVariables(css));
+Output:
+{
+  "--main-color": "#3498db",
+  "--padding": "10px 20px",
+  "--font-size": "16px"
+}
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
