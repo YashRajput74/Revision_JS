@@ -23,6 +23,6 @@ Output:
 function parseCSSVariables(css) {
     //to detect the root variable and then return all the values present inside it
     //write a function that is able to check for the root maybe?
-    
+    //or maybe brackets one too right?
     return
 }
