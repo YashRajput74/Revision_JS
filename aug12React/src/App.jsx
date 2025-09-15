@@ -24,10 +24,11 @@ Clicking outside the dropdown closes it.
 */
 
 import Dropdown from "./Dropdown";
+import Education from "./Education";
 
 export default function App() {
     const options = ["JS","HTML","CSS","React"];
     return (
-        <Dropdown options={options} />
+        <Education />
     )
 }
