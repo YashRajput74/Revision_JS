@@ -26,6 +26,65 @@ Clicking outside the dropdown closes it.
 import Dropdown from "./Dropdown";
 import Education from "./Education";
 
+const skills = {
+    label: "Skills",
+    renderType: "unordered",//ordered
+    items: [
+        {
+            label: "Languages",
+            renderType: "bars",
+            items: [
+                { label: "JavaScript", value: 95 },
+                { label: "Java", value: 75 },
+                { label: "HTML5", value: 90 },
+                { label: "CSS3", value: 85 },
+            ],
+        },
+        {
+            label: "Frontend",
+            renderType: "unordered",
+            items: [
+                {
+                    label: "React.js",
+                    renderType: "ordered",
+                    items: ["useState", "useEffect", "useHooks"],
+                },
+                "Responsive Web Design",
+                "SPA Architecture",
+                "API Integration",
+                "DOM Manipulation",
+            ],
+        },
+        {
+            label: "Tools",
+            renderType: "unordered",
+            items: ["Git & GitHub", "npm", "Chrome DevTools", "VS Code"],
+        },
+        {
+            label: "Concepts",
+            renderType: "unordered",
+            items: [
+                "Object-Oriented Programming",
+                "State Management (React Hooks)",
+                "Component Reusability",
+                "Async Programming",
+            ],
+        },
+        /* 
+        {
+            label: "Concepts",
+            renderType: "chart",
+            items: [
+                { label: "Object-Oriented Programming", value: 25 },
+                { label: "State Management (React Hooks)", value: 30 },
+                { label: "Component Reusability", value: 20 },
+                { label: "Async Programming", value: 25 },
+            ],
+        }
+        */
+    ],
+};
+
 export default function App() {
     const options = ["JS","HTML","CSS","React"];
     return (
