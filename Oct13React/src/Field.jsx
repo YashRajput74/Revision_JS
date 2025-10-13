@@ -14,8 +14,10 @@ export default function Field({ field }) {
     else if(type=="radio"){
         return (
             <>
-                {options.map((option)=>(
-                    <input type="radio" name={id} id={id} value={option}/>
+                {options.map((option,index)=>(
+                    <label key={index}>
+                        <input type="radio" name={id} id={id} value={option}/>{option}
+                    </label>
                 ))}
             </>
         )
