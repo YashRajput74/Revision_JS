@@ -1,42 +1,24 @@
-<!-- 
-Responsive Navbar with Dropdown (CSS-only)
-Task:
-Create a responsive navigation bar:
-Horizontal navbar for desktop
-Hamburger menu for mobile (open/close using checkbox + label trick — no JS)
-Include a dropdown inside the navbar using only CSS hover/focus.
-
-Challenges:
-Pure CSS interactivity (checkbox hack)
-Media queries for layout switching
-Clean transitions/animations 
--->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Scroll 3D Zoom Effect</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <img src="#" alt="logo_img" class="logo">
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
+    <div class="spacer"></div> <!-- just for scroll space -->
+
+    <div class="container">
+        <div class="content">
+            <div class="center-text">Zoom Text</div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Templates</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-    <script src="./index.js"></script>
+    </div>
+
+    <div class="spacer"></div> <!-- another spacer for scroll -->
+    <script src="index.js"></script>
 </body>
+
 </html>
