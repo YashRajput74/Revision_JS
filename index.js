@@ -4,7 +4,7 @@ const text = document.querySelector('.center-text');
 window.addEventListener('scroll', () => {
     // Get how far we've scrolled relative to total height
     const scrollY = window.scrollY;
-    console.log(scrollY);
+    console.log(scrollY);//we need to make the bottom scrolling invisible somehow...
     const maxScroll = document.body.scrollHeight - window.innerHeight;
     const ratio = scrollY / maxScroll; // 0 to 1
 
