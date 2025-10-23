@@ -4,7 +4,6 @@ body {
     color: #fff;
     font-family: Arial, sans-serif;
     height: 400vh;
-    /* long enough to allow scroll */
 }
 
 .container {
@@ -33,5 +32,4 @@ body {
 
 .spacer {
     height: 100vh;
-    /* sections above and below */
 }
