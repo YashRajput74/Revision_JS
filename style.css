@@ -1,11 +1,11 @@
-/* body {
+body {
     margin: 0;
     background-color: #111;
     color: #fff;
     font-family: Arial, sans-serif;
     height: 400vh;
 }
- */
+
 .container {
     position: sticky;
     top: 0;
