@@ -1,5 +1,6 @@
 import { useState } from "react";
 import List from "./List";
+import Form from "./Form";
 
 const listOfCountries = [
     "Afghanistan",
@@ -209,6 +210,7 @@ export default function App() {
     }
     return (
         <div>
+            <Form />
             <label htmlFor="searchInput">Search here</label>
             <input type="text" id="searchInput" placeholder="Type a country" onChange={(e) => filterCountries(e.target.value)} />
             <List data={countries} />
