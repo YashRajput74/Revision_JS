@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wagory | Pet Store</title>
+    <style>
+        /* -------- GLOBAL -------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #faf9f7;
+            color: #222;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* -------- HEADER -------- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #f36c21;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .header-btns button {
+            background: #f36c21;
+            color: #fff;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            margin-left: 0.5rem;
+        }
+
+        /* -------- HERO -------- */
+        .hero {
+            background: linear-gradient(135deg, #ffce8d, #ffa94d);
+            padding: 3rem 5%;
+            border-radius: 0 0 40px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .hero-text {
+            flex: 1 1 400px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #222;
+        }
+
+        .hero-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            color: #444;
+        }
+
+        .hero-text button {
+            background: #f36c21;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .hero-img {
+            flex: 1 1 300px;
+            text-align: right;
+        }
+
+        /* -------- FEATURES -------- */
+        .features {
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .features h2 {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* -------- CATEGORIES -------- */
+        .categories {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .category-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .category {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        /* -------- PRODUCTS -------- */
+        .products {
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 1rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card h4 {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+            color: #333;
+        }
+
+        .price {
+            color: #f36c21;
+            font-weight: 600;
+        }
+
+        .product-card button {
+            margin-top: 0.8rem;
+            background: #f36c21;
+            color: #fff;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        /* -------- OUR STORY -------- */
+        .our-story {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            background: #fff;
+            border-radius: 20px;
+            padding: 3rem 5%;
+            margin: 3rem 0;
+        }
+
+        .our-story-text {
+            flex: 1 1 400px;
+        }
+
+        .our-story-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .our-story-text p {
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+
+        .our-story-text button {
+            background: #f36c21;
+            color: #fff;
+            border: none;
+            padding: 0.7rem 1.4rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .our-story-img {
+            flex: 1 1 300px;
+        }
+
+        /* -------- NEWSLETTER -------- */
+        .newsletter {
+            background: #e6f0ff;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-radius: 20px;
+            margin: 3rem 0;
+        }
+
+        .newsletter h2 {
+            margin-bottom: 1rem;
+        }
+
+        .newsletter form {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .newsletter input {
+            padding: 0.7rem 1rem;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            width: 250px;
+            outline: none;
+        }
+
+        .newsletter button {
+            background: #f36c21;
+            border: none;
+            color: #fff;
+            border-radius: 25px;
+            padding: 0.7rem 1.4rem;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        /* -------- FOOTER -------- */
+        footer {
+            background: #fff;
+            padding: 2rem 5%;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .socials {
+            margin-top: 0.5rem;
+        }
+
+        .socials a {
+            margin: 0 0.5rem;
+            font-size: 1.2rem;
+            color: #f36c21;
+        }
+
+        /* -------- RESPONSIVE -------- */
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
+            }
+
+            .hero-img {
+                text-align: center;
+            }
+
+            .our-story {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">🐾 Wagory</div>
+        <nav>
+            <ul>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Food</a></li>
+                <li><a href="#">Toys</a></li>
+                <li><a href="#">Journal</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-btns">
+            <button>Log in</button>
+            <button>Shop now</button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Ensure the Best Bite Every Time</h1>
+            <p>Give your pets the nutrition they deserve – premium ingredients crafted by experts & delivered with love
+                for your furbabies.</p>
+            <button>Browse products</button>
+        </div>
+        <div class="hero-img">
+            <img src="https://placehold.co/400x300?text=Cat+%26+Dog" alt="Hero pets">
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features container">
+        <h2>We Help To Keep Your Pet Safe</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <img src="https://placehold.co/300x200" alt="">
+                <h3>We Bring the Best Food!</h3>
+            </div>
+            <div class="feature-card">
+                <img src="https://placehold.co/300x200" alt="">
+                <h3>Healthy Pets, Always.</h3>
+            </div>
+            <div class="feature-card">
+                <img src="https://placehold.co/300x200" alt="">
+                <h3>Best Toys for your Pets</h3>
+            </div>
+            <div class="feature-card">
+                <img src="https://placehold.co/300x200" alt="">
+                <h3>Their Cozy Corner</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories container">
+        <h2>Product Categories</h2>
+        <div class="category-icons">
+            <div class="category">🍖 Food</div>
+            <div class="category">🧸 Toys</div>
+            <div class="category">🛏️ Beds</div>
+            <div class="category">💊 Wellness</div>
+            <div class="category">🦴 Collars</div>
+            <div class="category">🥣 Bowls</div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products container">
+        <h2>Top Picks for Happy, Healthy Pets</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://placehold.co/300x250" alt="">
+                <h4>1st Choice Sterilized Cat Kibble</h4>
+                <p class="price">$26</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://placehold.co/300x250" alt="">
+                <h4>Royal Canin Digestive Care</h4>
+                <p class="price">$36</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://placehold.co/300x250" alt="">
+                <h4>Grain-Free Chicken Delight</h4>
+                <p class="price">$28</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://placehold.co/300x250" alt="">
+                <h4>Luxury Leather Collar</h4>
+                <p class="price">$20</p>
+                <button>Add to cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="our-story container">
+        <div class="our-story-text">
+            <h2>More Than Pet Food — It’s a Promise to Their Health.</h2>
+            <p>We’re not just filling bowls — we’re nourishing joy. Every recipe is crafted with natural ingredients,
+                packed with love, and trusted by thousands of furry customers.</p>
+            <button>Learn Our Story</button>
+        </div>
+        <div class="our-story-img">
+            <img src="https://placehold.co/400x300?text=Happy+Owners" alt="">
+        </div>
+    </section>
+
+    <!-- POPULAR PICKS -->
+    <section class="products container">
+        <h2>Our Popular Picked</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://placehold.co/300x250" alt="">
+                <h4>1st Choice Sterilized Cat Kibble</h4>
+                <p class="price">$26</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://placehold.co/300x250" alt="">
+                <h4>Perfect Fit Junior Dog Formula</h4>
+                <p class="price">$28</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://placehold.co/300x250" alt="">
+                <h4>Royal Canin Digestive Care</h4>
+                <p class="price">$30</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://placehold.co/300x250" alt="">
+                <h4>Cozy Paws Plush Pet Bed</h4>
+                <p class="price">$25</p>
+                <button>Add to cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter container">
+        <h2>Get Tail-Wagging Updates in Your Inbox! 🐶</h2>
+        <p>Join our pack for exclusive offers, product launches, and pet care tips.</p>
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Wagory — All Rights Reserved</p>
+        <div class="socials">
+            <a href="#">🐾</a>
+            <a href="#">📘</a>
+            <a href="#">📷</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
