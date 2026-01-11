@@ -15,7 +15,7 @@ export default function SearchInput() {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setDebouncedInput(input);//when we get debounced input we call the api... but the catch of cancelling the api let us code that later...
+            setDebouncedInput(input);
         }, 300);
 
         return () => clearTimeout(timer);
