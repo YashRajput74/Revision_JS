@@ -1,0 +1,345 @@
+/* 
+## ⚙️ Frontend Demo Challenges (1–2 YOE+)
+
+### 1️⃣ Infinite List with Smart Caching
+
+**Build a list that:**
+
+* Fetches items page-by-page from an API
+* Loads more items when the user scrolls near the bottom
+* Caches previously loaded pages
+* Restores scroll position when navigating away and back
+
+**Constraints:**
+
+* No external infinite-scroll libraries
+* Must avoid duplicate requests
+* Handle loading + error states cleanly
+
+**Tests:**
+
+* State management
+* Performance awareness
+* Browser APIs (IntersectionObserver / scroll events)
+
+---
+
+### 2️⃣ Debounced Search with Race Condition Handling
+
+**Build a search input that:**
+
+* Debounces API calls
+* Cancels stale requests if a new query is typed
+* Displays results for the *latest* query only
+* Shows a “searching…” indicator correctly
+
+**Edge cases to think about:**
+
+* Fast typing
+* Slow network
+* Empty input
+* API errors
+
+**Tests:**
+
+* Async control
+* Understanding of closures & side effects
+* UX correctness
+
+---
+
+### 3️⃣ Form Builder (Dynamic + Validated)
+
+**Build a form generator that:**
+
+* Takes a JSON schema
+* Renders inputs dynamically
+* Supports required fields, min/max, and custom validation
+* Displays inline error messages
+* Prevents submission if invalid
+
+**Bonus:**
+
+* Add support for conditional fields (show/hide based on another field)
+
+**Tests:**
+
+* Component design
+* Controlled vs uncontrolled inputs
+* Validation strategy
+
+---
+
+### 4️⃣ Modal System with Portals
+
+**Build a reusable modal component that:**
+
+* Uses React Portals
+* Locks body scroll when open
+* Closes on:
+
+  * Escape key
+  * Clicking outside
+* Supports stacking (multiple modals)
+
+**Restrictions:**
+
+* No modal libraries
+
+**Tests:**
+
+* DOM knowledge
+* Event propagation
+* Accessibility awareness
+
+---
+
+### 5️⃣ Drag-and-Drop Kanban Board (No Library)
+
+**Build a mini Trello-style board:**
+
+* Columns with cards
+* Drag cards between columns
+* Maintain correct order
+* Persist state in localStorage
+
+**Hard part:**
+
+* Handling drag logic without `react-beautiful-dnd`
+
+**Tests:**
+
+* Mouse events
+* State synchronization
+* UX polish
+
+---
+
+### 6️⃣ Optimized Table with 10,000 Rows
+
+**Build a table that:**
+
+* Displays 10k+ rows
+* Scrolls smoothly
+* Supports sorting
+* Supports filtering
+
+**Constraint:**
+
+* No virtualization library
+
+**Hint:**
+
+* You’ll need to think about **windowing**
+
+**Tests:**
+
+* Performance optimization
+* Rendering strategy
+* Algorithmic thinking
+
+---
+
+### 7️⃣ Custom Hook Challenge
+
+**Write a custom hook that:**
+
+* Syncs state with `localStorage`
+* Works across tabs
+* Avoids infinite loops
+* Handles JSON safely
+
+**Tests:**
+
+* Hooks rules
+* Side effects
+* Browser events
+
+---
+
+### 8️⃣ Feature Flag System
+
+**Build a feature flag solution that:**
+
+* Enables/disables features based on config
+* Supports async loading
+* Falls back gracefully
+* Updates UI dynamically
+
+**Tests:**
+
+* Architecture
+* Separation of concerns
+* Async flows
+
+---
+
+## 🧠 How Interviewers Use These
+
+They’ll watch for:
+
+* How you **break the problem down**
+* Whether you **handle edge cases**
+* How clean and readable your code is
+* If you can explain *why* you chose an approach
+
+Not perfection. **Reasoning.**
+
+---
+ */
+
+/* 
+
+## 🟡 Frontend Coding Challenges (Perfect Warm-Up)
+
+### 1️⃣ Todo List (But Slightly Smarter)
+
+**Build a Todo app that supports:**
+
+* Add / delete todos
+* Mark as complete
+* Filter: All / Active / Completed
+* Persist data in `localStorage`
+
+**Nice-to-have (optional):**
+
+* Edit a todo
+* Clear completed
+
+**Tests:**
+
+* State handling
+* Controlled inputs
+* Basic persistence
+
+---
+
+### 2️⃣ Tabs Component (Reusable)
+
+**Build a Tabs component that:**
+
+* Accepts tab data as props
+* Shows one tab at a time
+* Highlights active tab
+* Allows keyboard navigation (left/right arrows)
+
+**Tests:**
+
+* Component design
+* Props vs state
+* Accessibility basics
+
+---
+
+### 3️⃣ Debounced Input (No API Yet)
+
+**Build an input field that:**
+
+* Shows the typed value
+* Debounces an expensive operation (like `console.log`)
+* Uses a custom debounce utility or hook
+
+**Tests:**
+
+* `setTimeout` / `clearTimeout`
+* Closures
+* Hooks understanding
+
+---
+
+### 4️⃣ Accordion Component
+
+**Build an accordion that:**
+
+* Expands/collapses sections
+* Supports multiple open sections OR single open (configurable)
+* Animates height smoothly
+
+**Tests:**
+
+* Conditional rendering
+* CSS transitions
+* Component flexibility
+
+---
+
+### 5️⃣ Fetch & Display Data
+
+**Build a small app that:**
+
+* Fetches data from an API
+* Shows loading & error states
+* Displays a list of items
+* Allows retry on failure
+
+**API example:** users, posts, products, etc.
+
+**Tests:**
+
+* `useEffect`
+* Async handling
+* Error boundaries (conceptually)
+
+---
+
+### 6️⃣ Counter with Undo
+
+**Build a counter that:**
+
+* Increments / decrements
+* Has an “Undo” button
+* Stores history up to last N actions
+
+**Tests:**
+
+* State history
+* Array manipulation
+* Immutability
+
+---
+
+### 7️⃣ Theme Toggle (Light / Dark)
+
+**Build a theme switcher that:**
+
+* Toggles light/dark mode
+* Saves preference in `localStorage`
+* Applies theme on page load
+
+**Bonus:**
+
+* Respect system preference (`prefers-color-scheme`)
+
+**Tests:**
+
+* Side effects
+* CSS variables or class toggling
+
+---
+
+### 8️⃣ Search + Filter List
+
+**Build a list that:**
+
+* Filters items based on search text
+* Is case-insensitive
+* Shows “no results” state
+* Highlights matching text (optional)
+
+**Tests:**
+
+* Derived state
+* Performance awareness (small)
+
+---
+
+## ⏱️ How to Practice These (Interview Style)
+
+For each challenge:
+
+1. **5 min** – Clarify requirements & edge cases
+2. **30–40 min** – Code
+3. **5 min** – Refactor / explain trade-offs
+
+
+*/
