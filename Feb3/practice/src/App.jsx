@@ -1,38 +1,50 @@
 import { useEffect, useState } from "react"
+import ToDoApp from "./ToDoApp";
+import { ThemeProvider } from "./ThemeContext";
+import { useToast } from "./ToastContext";
+import ToastProvider from "./ToastProvider";
 
 export default function App() {
-	const [currentTime, setCurrentTime] = useState(0);//countdown value
-	const [timer, setTimer] = useState(0);// controlled input
-	const [isCompleted, setIsCompleted] = useState(false);// state that shows after timer raches zero
+	return (
+		<ThemeProvider>
+			<ToastProvider>
+				<AppContent />
+			</ToastProvider>
+		</ThemeProvider>
+	);
+}
 
-	const handleClick = () => {
-		setCurrentTime(timer);
-	}
-	
+function AppContent() {
+	const { showToast } = useToast(); // ✅ now safe
+	const [currentTime, setCurrentTime] = useState(0);
+	const [timer, setTimer] = useState(0);
+	const [isCompleted, setIsCompleted] = useState(false);
+
+	const handleClick = () => setCurrentTime(timer);
+
 	useEffect(() => {
 		if (currentTime <= 0) return;
-		const interval = setInterval(() => {
-			setCurrentTime((prev) => prev - 1);
-		}, 1000)
+		const interval = setInterval(() => setCurrentTime(prev => prev - 1), 1000);
 		return () => clearInterval(interval);
 	}, [currentTime]);
 
-	useEffect(()=>{
-		if(currentTime!==0) return;
-			setIsCompleted(true);
-			const timeout = setTimeout(() => {
-				setIsCompleted(false);
-			}, 3000);
-		return ()=>clearTimeout(timeout);
-	},[currentTime]);
+	useEffect(() => {
+		if (currentTime !== 0) return;
+		setIsCompleted(true);
+		const timeout = setTimeout(() => setIsCompleted(false), 3000);
+		return () => clearTimeout(timeout);
+	}, [currentTime]);
 
 	return (
 		<div>
 			<p>{currentTime}</p>
 			<input type="number" value={timer} onChange={(e) => setTimer(Number(e.target.value))} />
 			<button onClick={handleClick}>start</button>
-			{currentTime>0 && <div>running</div>}
-			{isCompleted && <div>completed </div>}
+			<ToDoApp />
+			{currentTime > 0 && <div>running</div>}
+			{isCompleted && <div>completed</div>}
+			<button onClick={() => showToast({ message: "Success", type: "success" })}>Success</button>
+			<button onClick={() => showToast({ message: "Error", type: "error" })}>Error</button>
 		</div>
-	)
+	);
 }
