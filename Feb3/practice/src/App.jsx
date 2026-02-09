@@ -3,6 +3,12 @@ import ToDoApp from "./ToDoApp";
 import { ThemeProvider } from "./ThemeContext";
 import { useToast } from "./ToastContext";
 import ToastProvider from "./ToastProvider";
+import CartProvider from "./CartProvider";
+import Products from "./Products";
+import Cart from "./Cart";
+import Modal from "./Modal";
+import Timer from "./Timer";
+import StopWatch from "./StopWatch";
 
 export default function App() {
 	return (
@@ -19,6 +25,7 @@ function AppContent() {
 	const [currentTime, setCurrentTime] = useState(0);
 	const [timer, setTimer] = useState(0);
 	const [isCompleted, setIsCompleted] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 
 	const handleClick = () => setCurrentTime(timer);
 
@@ -45,6 +52,15 @@ function AppContent() {
 			{isCompleted && <div>completed</div>}
 			<button onClick={() => showToast({ message: "Success", type: "success" })}>Success</button>
 			<button onClick={() => showToast({ message: "Error", type: "error" })}>Error</button>
+			<br /><br /><br /><br /><br /><br />
+			<CartProvider >
+				<Products />
+				<Cart />
+			</CartProvider>
+			<button onClick={() => setIsOpen(true)}>Open Modal</button>
+			{isOpen && <Modal onClose={() => setIsOpen(false)} />}
+			{/* <Timer /> */}
+			<StopWatch />
 		</div>
 	);
 }
