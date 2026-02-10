@@ -9,6 +9,9 @@ import Cart from "./Cart";
 import Modal from "./Modal";
 import Timer from "./Timer";
 import StopWatch from "./StopWatch";
+import CommentBox from "./CommentBox";
+import PaginationComponent from "./PaginationComponent";
+import InputMirrorComponent from "./InputMirrorComponent";
 
 export default function App() {
 	return (
@@ -61,6 +64,10 @@ function AppContent() {
 			{isOpen && <Modal onClose={() => setIsOpen(false)} />}
 			{/* <Timer /> */}
 			<StopWatch />
+			<br /><br /><br /><br /><br />
+			{/* <CommentBox /> */}
+			<PaginationComponent itemsPerPage="5" />
+			<InputMirrorComponent />
 		</div>
 	);
 }
