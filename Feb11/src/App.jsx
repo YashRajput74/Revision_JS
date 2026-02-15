@@ -2,6 +2,8 @@ import { useState } from "react";
 import Todo from "./Todo";
 import CustomDropdown from "./CustomDropdown";
 import NewComponent from "./NewComponent";
+import BasicComponent from "./BasicComponent";
+import DragDropList from "./DragDropList";
 
 /* 
 Data Table Component (Very Powerful for Interviews)
@@ -58,6 +60,8 @@ export default function App() {
             <Todo />
             <CustomDropdown />
             <NewComponent />
+            <BasicComponent />
+            <DragDropList />
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 const data = [
     "Apple", "Banana", "Orange", "Mango", "Strawberry",
     "Blueberry", "Raspberry", "Blackberry", "Pineapple", "Grapes",
@@ -14,7 +14,9 @@ const data = [
 
 export default function NewComponent() {
     const [searchInput, setSearchInput] = useState('');
-    const [isShown, setIsShown] = useState(false);
+    const [results, setResults] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const controllerRef = useRef(null);
     useEffect(() => {
         let timeout;
         if (searchInput) {
@@ -31,7 +33,13 @@ export default function NewComponent() {
                 Search Fruits:
             </label>
             <input id="Fruits" value={searchInput} onChange={(e) => setSearchInput(e.target.value)} />
-            {isShown && <h2>{searchInput}</h2>}
+            {loading && <p>Loading...</p>}
+
+            <ul>
+                {results.map((item, index) => (
+                    <li key={index}>{item}</li>
+                ))}
+            </ul>
         </div>
     )
 }
