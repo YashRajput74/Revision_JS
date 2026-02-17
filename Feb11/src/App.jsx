@@ -4,6 +4,9 @@ import CustomDropdown from "./CustomDropdown";
 import NewComponent from "./NewComponent";
 import BasicComponent from "./BasicComponent";
 import DragDropList from "./DragDropList";
+import MultiSelectDropDown from "./MultiSelectDropDown";
+import DebounceSearch from "./DebounceSearch";
+import NewMultiSelect from "./NewMultiSelect";
 
 /* 
 Data Table Component (Very Powerful for Interviews)
@@ -62,6 +65,12 @@ export default function App() {
             <NewComponent />
             <BasicComponent />
             <DragDropList />
+            <MultiSelectDropDown />
+            <br /><br /><br /><br /><br />
+            <DebounceSearch />
+            <br /><br /><br /><br /><br />
+            <NewMultiSelect />
+            
         </div>
     )
 }
