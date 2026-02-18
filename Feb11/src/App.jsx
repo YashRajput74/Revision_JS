@@ -7,6 +7,8 @@ import DragDropList from "./DragDropList";
 import MultiSelectDropDown from "./MultiSelectDropDown";
 import DebounceSearch from "./DebounceSearch";
 import NewMultiSelect from "./NewMultiSelect";
+import KanbanBoard from "./KanbanBoard";
+import LengthyTable from "./LengthyTable";
 
 /* 
 Data Table Component (Very Powerful for Interviews)
@@ -70,7 +72,8 @@ export default function App() {
             <DebounceSearch />
             <br /><br /><br /><br /><br />
             <NewMultiSelect />
-            
+            <KanbanBoard />
+            <LengthyTable />
         </div>
     )
 }
