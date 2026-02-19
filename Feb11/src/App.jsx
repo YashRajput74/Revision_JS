@@ -9,6 +9,7 @@ import DebounceSearch from "./DebounceSearch";
 import NewMultiSelect from "./NewMultiSelect";
 import KanbanBoard from "./KanbanBoard";
 import LengthyTable from "./LengthyTable";
+import ModalProvider, { useModal } from "./ModalContext";
 
 /* 
 Data Table Component (Very Powerful for Interviews)
@@ -28,10 +29,26 @@ const students = [
     { id: 4, name: 'Sandhya', rollno: '20005' },
     { id: 5, name: 'Saloni', rollno: '20006' },
 ]
-
 export default function App() {
+    return (
+        <ModalProvider>
+            <AppContent />
+        </ModalProvider>
+    )
+}
+export function AppContent() {
     const [currentFilter, setCurrentFilter] = useState('');
+    const { open, close } = useModal();
 
+    const openModal=()=>{
+        open(
+            <div>
+                <h2>This is a modal</h2>
+                <p>Modal close karne ke liye button dabayein</p>
+                <button onClick={close}>Close</button>
+            </div>
+        )
+    }
     const filteredData = students.filter((student) => (
         student.name.toLowerCase().includes(currentFilter.toLowerCase())
     ));
@@ -74,6 +91,7 @@ export default function App() {
             <NewMultiSelect />
             <KanbanBoard />
             <LengthyTable />
+            <button onClick={openModal}>Open Modal</button>
         </div>
     )
 }
