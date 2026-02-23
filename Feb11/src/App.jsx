@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Todo from "./Todo";
 import CustomDropdown from "./CustomDropdown";
 import NewComponent from "./NewComponent";
@@ -10,6 +10,8 @@ import NewMultiSelect from "./NewMultiSelect";
 import KanbanBoard from "./KanbanBoard";
 import LengthyTable from "./LengthyTable";
 import ModalProvider, { useModal } from "./ModalContext";
+import SplitPane from "./SplitPane";
+import CommandPallete from "./CommandPallete";
 
 /* 
 Data Table Component (Very Powerful for Interviews)
@@ -39,8 +41,23 @@ export default function App() {
 export function AppContent() {
     const [currentFilter, setCurrentFilter] = useState('');
     const { open, close } = useModal();
+    const [isOpen, setIsOpen] = useState(false);
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.ctrlKey && e.key.toLowerCase() === "k") {
+                e.preventDefault();
+                setIsOpen(prev => !prev);
+            }
+            if (e.key === "Escape") {
+                setIsOpen(false);
+            }
+        };
 
-    const openModal=()=>{
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, []);
+    const openModal = () => {
         open(
             <div>
                 <h2>This is a modal</h2>
@@ -92,6 +109,10 @@ export function AppContent() {
             <KanbanBoard />
             <LengthyTable />
             <button onClick={openModal}>Open Modal</button>
+            <br /><br /><br /><br /><br />
+            <SplitPane />
+            <br /><br /><br /><br /><br />
+            {isOpen && <CommandPallete isOpen={isOpen} onClose={() => setIsOpen(false)} />}
         </div>
     )
 }

@@ -1,0 +1,23 @@
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left-panel {
+    width: 300px;
+    min-width: 100px;
+    border: 1px solid black;
+}
+
+.split-line {
+    width: 5px;
+    cursor: col-resize;
+    background: #ccc;
+}
+
+.right-panel {
+    flex: 1;
+    min-width: 100px;
+    border: 1px solid black;
+}
