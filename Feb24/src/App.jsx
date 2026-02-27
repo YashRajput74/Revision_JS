@@ -1,7 +1,9 @@
 import AdvancedSearchableTreeSelect from "./AdvancedSearchableTreeSelect";
 import Calender from "./Calender";
 import CustomDateRangePicker from "./CustomDateRangePicker";
+import CustomVideoPlayer from "./CustomVideoPlayer";
 import DragDropFileUploader from "./DragDropFileUploader";
+import MemoryKanban from "./MemoryKanban";
 import TabsSystem from "./TabsSystem";
 import VirtualizedList from "./VirtualizedList";
 /* 
@@ -37,12 +39,13 @@ Duplicate messages
 Component unmount while timeout active
 Memory leaks from timers
 */
-export default function App(){
+export default function App() {
     return (
         <div>
             Hello World!
-            <VirtualizedList />
-            <TabsSystem />
+            <CustomVideoPlayer />
+            {/* <VirtualizedList /> */}
+            {/* <TabsSystem /> */}
             {/* <Calender />
             <DragDropFileUploader />
             <br />
@@ -52,6 +55,7 @@ export default function App(){
             <AdvancedSearchableTreeSelect />
             <br /><br /><br /><br /><br />
             <CustomDateRangePicker /> */}
+            {/* <MemoryKanban /> */}
         </div>
     )
 }
