@@ -152,7 +152,7 @@ export const initialWidgetData = {
         w: 100,
         h: 120
     },
-    "2":{
+    "2": {
         id: "2",
         label: "Users ki list",
         widgetType: "Table",//Chart, Table, Stats Card
@@ -161,7 +161,7 @@ export const initialWidgetData = {
         w: 120,
         h: 150
     },
-    "3":{
+    "3": {
         id: "3",
         label: "overall salary",
         widgetType: "card",//Chart, Table, Stats Card
@@ -171,3 +171,66 @@ export const initialWidgetData = {
         h: 120
     },
 }
+
+export const initialImages = [
+    {
+        id: 1,
+        url: "https://picsum.photos/id/1015/1200/800",
+        thumbnail: "https://picsum.photos/id/1015/400/300",
+        title: "Mountain Lake",
+    },
+    {
+        id: 2,
+        url: "https://picsum.photos/id/1016/1200/800",
+        thumbnail: "https://picsum.photos/id/1016/400/300",
+        title: "Forest Road",
+    },
+    {
+        id: 3,
+        url: "https://picsum.photos/id/1018/1200/800",
+        thumbnail: "https://picsum.photos/id/1018/400/300",
+        title: "Snowy Peaks",
+    },
+    {
+        id: 4,
+        url: "https://picsum.photos/id/1020/1200/800",
+        thumbnail: "https://picsum.photos/id/1020/400/300",
+        title: "Desert Sand",
+    },
+    {
+        id: 5,
+        url: "https://picsum.photos/id/1024/1200/800",
+        thumbnail: "https://picsum.photos/id/1024/400/300",
+        title: "Cute Dog",
+    },
+    {
+        id: 6,
+        url: "https://picsum.photos/id/1027/1200/800",
+        thumbnail: "https://picsum.photos/id/1027/400/300",
+        title: "Ocean Cliff",
+    },
+    {
+        id: 7,
+        url: "https://picsum.photos/id/1035/1200/800",
+        thumbnail: "https://picsum.photos/id/1035/400/300",
+        title: "River Bridge",
+    },
+    {
+        id: 8,
+        url: "https://picsum.photos/id/1039/1200/800",
+        thumbnail: "https://picsum.photos/id/1039/400/300",
+        title: "Waterfall",
+    },
+    {
+        id: 9,
+        url: "https://picsum.photos/id/1043/1200/800",
+        thumbnail: "https://picsum.photos/id/1043/400/300",
+        title: "Foggy Forest",
+    },
+    {
+        id: 10,
+        url: "https://picsum.photos/id/1050/1200/800",
+        thumbnail: "https://picsum.photos/id/1050/400/300",
+        title: "Sunset Beach",
+    },
+];
