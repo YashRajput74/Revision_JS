@@ -5,6 +5,7 @@ import TaggingInput from "./TaggingInput";
 import ImageGallery from "./ImageGallery";
 import BreadCrumbs from "./BreadCrumbs";
 import ReusableDragDropList from "./ReusableDragDropList";
+import MultiSelectComponent from "./MultiSelectComponent";
 
 export default function App() {
     return (
@@ -14,7 +15,8 @@ export default function App() {
             {/* <WidgetGrid /> */}
             {/* <ImageGallery /> */}
             {/* <BreadCrumbs /> */}
-            <ReusableDragDropList />
+            {/* <ReusableDragDropList /> */}
+            <MultiSelectComponent />
         </div>
     )
 }
