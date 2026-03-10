@@ -5,7 +5,12 @@ import UrlShortener from "./UrlShortener";
 import ToDoList from "./ToDoList";
 import DebouncedSearch from "./DebouncedSearch";
 import ResizableTableComponent from "./ResizableTableComponent";
-export default function App(){
+import NestedDragDrop from "./NestedDragDropList";
+import SpreadSheet from "./SpreadSheet";
+import CartComponent from "./CartComponent";
+import NavbarComponent from "./NavbarComponent";
+export default function App() {
+	
 	return (
 		<div>
 			{/* <RichCodeEditor /> */}
@@ -14,6 +19,13 @@ export default function App(){
 			<ToDoList />
 			<DebouncedSearch />
 			<ResizableTableComponent />
+			<NestedDragDrop />
+			<SpreadSheet />
+			<CartComponent />
+			<NavbarComponent />
+			{/* 
+			<LoginComponent />
+			<ProfileComponent /> */}
 		</div>
 	)
 }
