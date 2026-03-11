@@ -9,12 +9,14 @@ import NestedDragDrop from "./NestedDragDropList";
 import SpreadSheet from "./SpreadSheet";
 import CartComponent from "./CartComponent";
 import NavbarComponent from "./NavbarComponent";
+import JSONViewer from "./JSONViewer";
+import SchemaDrivenTable from "./SchemaDrivenTable";
 export default function App() {
 	
 	return (
 		<div>
 			{/* <RichCodeEditor /> */}
-			<FolderStructure />
+			{/* <FolderStructure />
 			<UrlShortener />
 			<ToDoList />
 			<DebouncedSearch />
@@ -22,10 +24,9 @@ export default function App() {
 			<NestedDragDrop />
 			<SpreadSheet />
 			<CartComponent />
-			<NavbarComponent />
-			{/* 
-			<LoginComponent />
-			<ProfileComponent /> */}
+			<NavbarComponent /> */}
+			<JSONViewer />
+			<SchemaDrivenTable />
 		</div>
 	)
 }
