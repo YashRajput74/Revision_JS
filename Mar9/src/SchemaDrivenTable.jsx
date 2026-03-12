@@ -44,13 +44,18 @@ const data = [
 export default function SchemaDrivenTable() {
     const [currentData, setCurrentData] = useState(data);
     const [editingCell, setEditingCell] = useState(null);
-    const handleChange=(rowIndex,key,value)=>{
-        const updated=[...currentData];
-        updated[rowIndex]={
+    const handleChange = (rowIndex, key, value) => {
+        const updated = [...currentData];
+        updated[rowIndex] = {
             ...updated[rowIndex],
-            [key]:value
+            [key]: value
         }
         setCurrentData(updated)
+    }
+    const handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+            setEditingCell(null);
+        }
     }
     return (
         <div>
@@ -74,13 +79,13 @@ export default function SchemaDrivenTable() {
                                 return (
                                     <td key={colIndex} onClick={() => setEditingCell({ row: rowIndex, col: colIndex })}>
                                         {isEditing ? (col.type === "select" ? (
-                                            <select value={row[col.key]} onChange={(e) => handleChange(rowIndex, col.key, e.target.value)} onBlur={() => setEditingCell(null)}>
+                                            <select value={row[col.key]} onChange={(e) => handleChange(rowIndex, col.key, e.target.value)} onBlur={() => setEditingCell(null)} onKeyDown={handleKeyDown}>
                                                 {col.options.map(opt => (
                                                     <option key={opt}>{opt}</option>
                                                 ))}
                                             </select>
                                         ) : (
-                                            <input type={col.type} value={row[col.key]} onBlur={() => setEditingCell(null)} onChange={(e) => handleChange(rowIndex, col.key, e.target.value)} />
+                                            <input type={col.type} value={row[col.key]} onBlur={() => setEditingCell(null)} onChange={(e) => handleChange(rowIndex, col.key, e.target.value)} onKeyDown={handleKeyDown} />
                                         )) : (row[col.key])}
                                     </td>
                                 )

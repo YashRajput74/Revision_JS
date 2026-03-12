@@ -11,8 +11,14 @@ import CartComponent from "./CartComponent";
 import NavbarComponent from "./NavbarComponent";
 import JSONViewer from "./JSONViewer";
 import SchemaDrivenTable from "./SchemaDrivenTable";
+import GithubActivityTimeline from "./GithubActivityTimeline";
+import Modal from "./Modal";
+import SplitPaneLayout from "./SplitPaneLayout";
+import { Pane } from "./Pane";
+import CommentSystem from "./CommentSystem";
+import Users from "./Users";
 export default function App() {
-	
+
 	return (
 		<div>
 			{/* <RichCodeEditor /> */}
@@ -24,9 +30,31 @@ export default function App() {
 			<NestedDragDrop />
 			<SpreadSheet />
 			<CartComponent />
-			<NavbarComponent /> */}
+			<NavbarComponent />
 			<JSONViewer />
-			<SchemaDrivenTable />
+			<SchemaDrivenTable /> */}
+			<GithubActivityTimeline />
+			{/* <Modal /> */}
+			{/* <div style={{ width: "500px", height: "500px" }}>
+
+				<SplitPaneLayout direction="horizontal">
+
+					<Pane>
+						Sidebar
+					</Pane>
+
+					<Pane>
+						Editor
+					</Pane>
+
+					<Pane>
+						Terminal
+					</Pane>
+
+				</SplitPaneLayout>
+			</div> */}
+			<CommentSystem />
+			<Users />
 		</div>
 	)
 }

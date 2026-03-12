@@ -31,5 +31,80 @@
 }
 
 .active-line {
-  background: #eef2ff;
+    background: #eef2ff;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 80px 20px auto;
+    align-items: start;
+}
+
+.time {
+    font-weight: bold;
+}
+
+.separator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #333;
+    border-radius: 50%;
+}
+
+.line {
+    width: 2px;
+    height: 40px;
+    background: #ccc;
+}
+
+.content {
+    padding-left: 10px;
+}
+
+.title {
+    cursor: pointer;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+.details {
+    margin-top: 6px;
+    color: #555;
+}
+
+.active .dot {
+    background: blue;
+}
+
+.modal{
+    position: absolute;
+    background: white;
+    border: 1px solid black;
+
+}
+
+.modal-header{
+    padding: 10px;
+    cursor: move;
+}
+
+.resize-handle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 12px;
+  height: 12px;
+  cursor: se-resize;
 }
