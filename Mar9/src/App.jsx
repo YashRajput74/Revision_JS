@@ -22,7 +22,7 @@ export default function App() {
 	return (
 		<div>
 			{/* <RichCodeEditor /> */}
-			{/* <FolderStructure />
+			<FolderStructure />
 			<UrlShortener />
 			<ToDoList />
 			<DebouncedSearch />
@@ -32,10 +32,10 @@ export default function App() {
 			<CartComponent />
 			<NavbarComponent />
 			<JSONViewer />
-			<SchemaDrivenTable /> */}
+			<SchemaDrivenTable />
 			<GithubActivityTimeline />
 			{/* <Modal /> */}
-			{/* <div style={{ width: "500px", height: "500px" }}>
+			<div style={{ width: "500px", height: "500px" }}>
 
 				<SplitPaneLayout direction="horizontal">
 
@@ -52,7 +52,7 @@ export default function App() {
 					</Pane>
 
 				</SplitPaneLayout>
-			</div> */}
+			</div>
 			<CommentSystem />
 			<Users />
 		</div>
