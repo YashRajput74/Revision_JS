@@ -35,7 +35,7 @@ export default function App() {
 			<SchemaDrivenTable />
 			<GithubActivityTimeline />
 			{/* <Modal /> */}
-			<div style={{ width: "500px", height: "500px" }}>
+			{/* <div style={{ width: "500px", height: "500px" }}>
 
 				<SplitPaneLayout direction="horizontal">
 
@@ -52,7 +52,7 @@ export default function App() {
 					</Pane>
 
 				</SplitPaneLayout>
-			</div>
+			</div> */}
 			<CommentSystem />
 			<Users />
 		</div>
