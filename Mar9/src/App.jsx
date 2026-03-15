@@ -30,10 +30,10 @@ export default function App() {
 			<NestedDragDrop />
 			<SpreadSheet />
 			<CartComponent />
-			<NavbarComponent />
+			{/* <NavbarComponent />
 			<JSONViewer />
 			<SchemaDrivenTable />
-			<GithubActivityTimeline />
+			<GithubActivityTimeline /> */}
 			{/* <Modal /> */}
 			{/* <div style={{ width: "500px", height: "500px" }}>
 
