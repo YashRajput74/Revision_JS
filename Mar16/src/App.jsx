@@ -3,7 +3,9 @@ import HeadlessFormBuilder from "./HeadlessFormBuilder";
 import RealTimeTextEditor from "./RealTimeTextEditor";
 import UndoRedoFunc from "./UndoRedoFunc"; */
 
+import FormBuilder from "./FormBuilder";
 import GraphBasedDependencyEngine from "./GraphBasedDependencyEngine";
+import MultipleFileUploads from "./MultipleFileUploads";
 
 export default function App(){
     return (
@@ -13,6 +15,8 @@ export default function App(){
             {/* <HeadlessFormBuilder /> */}
             {/* <CollaborativeEditor /> */}
             <GraphBasedDependencyEngine />
+            <MultipleFileUploads />
+            <FormBuilder />
         </div>
     )
 }
