@@ -6,6 +6,7 @@ import UndoRedoFunc from "./UndoRedoFunc"; */
 import FormBuilder from "./FormBuilder";
 import GraphBasedDependencyEngine from "./GraphBasedDependencyEngine";
 import MultipleFileUploads from "./MultipleFileUploads";
+import TabsComponent from "./TabsComponent";
 
 export default function App(){
     return (
@@ -17,6 +18,7 @@ export default function App(){
             <GraphBasedDependencyEngine />
             <MultipleFileUploads />
             <FormBuilder />
+            <TabsComponent />
         </div>
     )
 }
