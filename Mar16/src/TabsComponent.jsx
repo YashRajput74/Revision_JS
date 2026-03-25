@@ -39,10 +39,10 @@ export default function TabsComponent() {
                 {tabs.map((tab) => (
                     <div key={tab.id} onClick={() => switchTab(tab.id)}>
                         {tab.title}
-                        <span onClick={(e) => {
+                       {/*  <span onClick={(e) => {
                             e.stopPropagation();
                             closetab(tab.id)
-                        }}>X</span>
+                        }}>X</span> */}
                     </div>
                 ))}
                 <button onClick={addTab}>+</button>
